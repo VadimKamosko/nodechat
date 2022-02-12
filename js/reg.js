@@ -49,7 +49,7 @@ document.querySelector("#regtwo").addEventListener("click", async () => {
     if (result.reg) {
       localStorage.setItem("token", result.token);
       localStorage.setItem("id", result.id);
-      window.location.href = "/";
+      window.location.href = "/chat";
     }
   }
 });

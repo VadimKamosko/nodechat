@@ -14,7 +14,7 @@ document.querySelector("#login").addEventListener("click", async () => {
   if (result.login) {
     localStorage.setItem("token", result.token);
     localStorage.setItem("id", result.id);
-    window.location.href = "/";
+    window.location.href = "/chat";
   }
 
   console.log(result);

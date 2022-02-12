@@ -6,24 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/index.css">
     <script src="/json.js" defer></script>
 </head>
 
 <body>
-    <div id='users'>HEllo</div>
+    <div id='users'>
+        <ol class="rectangle" id="rectangle">
+            <li><a href="#">Элемент списка</a></li>
+            <li><a href="#">Элемент списка</a></li>
+            <li><a href="#">Элемент списка</a></li>
+            <li><a href="#">Элемент списка</a></li>
+            <li><a href="#">Элемент списка</a></li>
+        </ol>
+        <button id='newroom'>Create groupchat</button>
+    </div>
 
-    <!-- <div id="modal" style="display: none;">
+    <div id="modal" style="display: none;">
         <input type="text" id='name'>
-        <select name="" id="select">
-            <option value="1">Синий</option>
-            <option value="2">Зеленый</option>
-            <option value="3">Желтый</option>
-            <option value="4">Красный</option>
-            <option value="5">Оранжевый</option>
-            <option value="6">Черный</option>
-        </select>
-        <button>Create</button>
-    </div> -->
+        <select id="select" multiple></select>
+        </form>
+
+
+        <button id="create">Create</button>
+    </div>
 </body>
 
 </html>

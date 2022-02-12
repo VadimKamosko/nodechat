@@ -1,8 +1,7 @@
 const express = require("express");
 app = express();
-const { createServer } = require("http");
+const httpServer = require("http").Server(app);
 const { Server } = require("socket.io");
-const httpServer = createServer(app);
 const io = new Server(httpServer, {
   /* options */
 });
@@ -16,6 +15,9 @@ require("./socket").init(io);
 exports.d = __dirname;
 app.use("", require("./routes/auth.router"));
 app.use("/chat/", require("./routes/chat.router"));
+app.use((req, res, next) => {
+  res.status(404).send("<h1>Page not found on the server</h1>");
+});
 
 httpServer.listen(3000, () => {
   console.log("Started");
